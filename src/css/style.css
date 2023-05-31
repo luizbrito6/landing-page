@@ -1,0 +1,355 @@
+/* CLASSES REUTILIZAVÉIS */
+.section {
+    min-height: 100vh;
+    padding: 100rem 0;
+}
+
+.main {
+    max-width: 1200rem;
+    margin: 0 auto;
+    padding: 0 30rem;
+
+}
+
+.main-bg {
+    background-image: url('../img/main-bg.svg');
+    width: 100%;
+}
+
+.white-bg {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+
+}
+
+/* FIM CLASSES REUTILIZAVÉIS */
+
+/* HEADER */
+.menu {
+    position: fixed;
+    width: 100%;
+    border-bottom: 1rem solid var(--light-gray-color);
+    z-index: 1;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70rem;
+}
+
+header a {
+    color: var(--primary-color);
+}
+
+header h1 a {
+    text-transform: uppercase;
+    font-size: 23rem;
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+header .nav-menu{
+    position: relative;
+}
+header .nav-menu ul {
+    display: flex;
+    gap: 40rem;
+}
+
+header .nav-menu ul li a {
+    font-size: 18rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header .nav-menu ul li a::after {
+    content: '';
+    display: flex;
+    justify-content: center;
+    background-color: var(--secodary-color);
+    width: 0;
+    height: 2rem;
+    left: 5rem;
+    margin-top: 3rem;
+    transition: all 300ms ease-in-out;
+}
+
+header .nav-menu ul li a:hover::after {
+    width: 35rem;
+}
+
+.divisao-header {
+    height: 70rem;
+}
+
+/* FIM HEADER */
+
+/* HERO */
+.section-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.hero .box-info {
+    display: flex;
+    flex-direction: column;
+    gap: 55rem;
+}
+
+.hero .box-img img {
+    width: 100%;
+}
+
+/* FIM HERO */
+
+/* INTRO */
+.section-intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.box-info-intro {
+    max-width: 640rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.section-intro h2,
+.section-intro p {
+    color: var(--primary-color);
+}
+
+.section-intro h2 {
+    margin: 0 0 50rem 0;
+}
+
+.section-intro p {
+    margin: 0 0 20rem 0;
+}
+
+/* FIM INTRO */
+
+/* GRID ONE and TWO */
+
+.section-grid-one h2 {
+    margin: 0 0 10rem 0;
+}
+
+.section-grid-one p {
+    margin: 0 0 60rem 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360rem, 1fr));
+    gap: var(--gap);
+    counter-reset: count;
+}
+
+article h3 {
+    font-size: 30rem;
+    padding: 0 0 20rem 0;
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+
+}
+
+.grid article h3::before {
+    counter-increment: count;
+    content: counter(count);
+    font-size: 80rem;
+    transform: rotate(15deg);
+}
+
+/* FIM GRID ONE and TWO  */
+
+
+/* GALLERY */
+
+.box-img {
+    width: 100%;
+    overflow: hidden;
+}
+
+.box-gallery .grid .box-img img {
+    transition: all 300ms ease-in-out;
+    width: 100%;
+}
+
+.box-gallery h2 {
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin: 0 0 10rem 0;
+}
+
+.box-gallery p {
+    color: var(--primary-color);
+    margin: 0 0 80rem 0;
+}
+
+.box-gallery .grid .box-img img:hover {
+    transform: rotate(5deg) scale(1.2);
+}
+
+/* FIM GALLERY */
+
+/* PRICING */
+
+.box-pricing{
+    text-align: center; 
+    max-width:  640rem;
+}
+
+.box-pricing h2, .box-pricing p{
+    color: var(--primary-color);
+}
+
+
+.box-pricing h2{
+    margin-bottom: 30rem;
+}
+
+.box-pricing p{
+    margin-bottom: 20rem;
+}
+
+
+.box-table{
+    overflow: auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+caption{
+    font-size: 16rem;
+    text-align: left;
+    margin-bottom: 10rem;
+    font-style: italic;
+}
+th, td{
+    border: 1rem solid var(--light-gray-color);
+    padding: 10rem;
+    white-space: nowrap;
+}
+thead, tfoot{
+    background-color: var(--light-gray-color);
+}
+tfoot{
+    text-align: right;
+}
+
+
+/* FIM PRICING */
+
+/* CONTACT */
+fieldset {
+    border: none;
+    
+}
+
+fieldset legend{
+    margin-bottom: 20rem;
+    font-size: 16rem;
+    font-style: italic;
+}
+
+fieldset form{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 30rem;
+
+}
+
+form .inputs{
+    display: flex;
+    width: 100%;
+    gap: 30rem;
+}
+
+.box-input{
+    width: 100%;
+}
+
+.box-input input{
+    width: 100%;
+    margin-top: 8rem;
+}
+
+.box-textarea, .box-textarea textarea{
+    width: 100%;
+    margin-top: 8rem;
+}
+
+
+
+.box-textarea textarea, .box-input input{
+    outline: none;
+    padding: 20rem;
+    font-size: 20rem;
+
+}
+
+.box-textarea textarea:focus, .box-input input:focus{
+    
+    border: 2px solid var(--secodary-color);
+}
+
+
+/*FIM CONTANCT  */
+
+
+/*  FOOTER  */
+footer{
+    padding: 20rem;
+}
+footer p{
+    font-size: 16rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+footer p span{
+    color: var(--secodary-color);
+}
+
+/* FIM FOOTER */
+
+.topo-btn{
+    font-size: 30rem;
+    width: 50rem;
+    height: 50rem;
+    margin-right: 20rem;
+    margin-bottom: 20rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+
+#checkbox{
+    display: none;
+}
